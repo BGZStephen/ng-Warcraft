@@ -1,1 +1,9 @@
 <h1>API</h1>
+<div class="api-buttons-container">
+  <button class="api-button" (click)="getBosses()">Get Bosses</button>
+</div>
+<div class="bosses-container" *ngIf="bossesResults">
+  <div class="bosses" *ngFor="let boss of bossesResults.bosses">
+    {{boss.id}}
+  </div>
+</div>
