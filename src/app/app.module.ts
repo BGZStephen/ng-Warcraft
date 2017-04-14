@@ -8,12 +8,14 @@ import { ApiSearchService } from "./services/api-search.service"
 import { AppComponent } from './app.component';
 import { ApiTestingComponent } from './api-testing/api-testing.component';
 import { HomeComponent } from './pages/home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ApiTestingComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiSearchService } from "../services/api-search.service"
 
 @Component({
   selector: 'wow-api-testing',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApiTestingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiSearch: ApiSearchService) {
+    this.apiSearch.getBosses()
+    .subscribe(res => {
+      console.log(res)
+    })
+  }
 
   ngOnInit() {
   }
