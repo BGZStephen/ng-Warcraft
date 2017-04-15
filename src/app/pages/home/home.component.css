@@ -1,0 +1,16 @@
+.content-container {
+  display: flex;
+  width: 100%;
+}
+
+.left-container {
+  width: 75%;
+}
+
+.right-container {
+  width: 25%;
+}
+
+h1 {
+  color: white;
+}
