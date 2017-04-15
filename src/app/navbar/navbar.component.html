@@ -1,8 +1,12 @@
+<div class="logo-container">
+  <img class="logo" src="/assets/images/logo.png">
+</div>
 <div class="navbar-conainer">
   <div class="navbar">
-    <ul class="navbar-list">
-      <li class="navbar-item" [routerLink]="['/']">Home</li>
-      <li class="navbar-item" [routerLink]="['/api']">Api</li>
+    <ul class="navbar-list" (window:resize)="navbarToggleResize()" [ngStyle]="navbarToggle()">
+      <li class="navbar-item" (click)="navbarClose()" [routerLink]="['/']" routerLinkActive="navbar-link-active" [routerLinkActiveOptions]="{exact: true}">Home</li>
+      <li class="navbar-item" (click)="navbarClose()" [routerLink]="['/api']" routerLinkActive="navbar-link-active">Api</li>
     </ul>
+    <p class="fa fa-bars navbar-toggle" (click)="navbarVisible = !navbarVisible;"></p>
   </div>
 </div>

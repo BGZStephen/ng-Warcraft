@@ -3,13 +3,11 @@
   background-image: url("/assets/images/background.jpg");
   background-position: center;
   min-height: 100vh;
-  padding: 10px 20px;
+  padding: 0 10px 10px 10px;
 }
 
 .main-container {
-  background: #131313;
-  border: 3px solid green;
-  border-radius: 10px;
+  background: #1a1a1a;
   padding: 10px 10px;
   width: 100%;
 }
