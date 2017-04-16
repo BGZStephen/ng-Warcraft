@@ -1,0 +1,40 @@
+<div class="content-container">
+  <h1>Zones</h1>
+  <hr>
+  <div class="api-buttons-container">
+    <button class="api-button" (click)="getZones()">Get Zones</button>
+    <button class="api-button" [disabled]="zoneInput.value.length < 1" (click)="getZone(zoneInput.value)" >Get Zone
+    </button><input class="api-input" type="text" placeholder="Zone ID" name="zoneInput" (keyup)="0" #zoneInput>
+  </div>
+
+  <div class="output-container" *ngIf="zonesResults">
+    <div class="zones-item" *ngFor="let zone of zonesResults.zones">
+      <h2 class="zone-name">{{zone.name}}</h2>
+      <p class="zone-description" *ngIf="zone.description">{{zone.description}}</p>
+      <h2 class="zone-bosses-title">Bosses</h2>
+      <div class="zone-bosses" *ngIf="zone.bosses">
+        <div class="zone-bosses-item" *ngFor="let boss of zone.bosses">
+          <h4 class="zone-boss-name"><strong>Name:</strong> {{boss.name}}</h4>
+          <p class="boss-level" *ngIf="boss.level"><strong>Level:</strong> {{boss.level}}</p>
+          <p class="boss-health" *ngIf="boss.health"><strong>Health:</strong> {{boss.health}}</p>
+          <p class="zone-boss-description" *ngIf="boss.description"><strong>Description:</strong> {{boss.description}}</p>
+        </div>
+      </div>
+      <hr class="zone-seperator">
+    </div>
+  </div>
+
+  <div class="output-container" *ngIf="zoneResult">
+    <h2 class="zone-name">{{zoneResult.name}}</h2>
+    <p class="zone-description" *ngIf="zoneResult.description">{{zoneResult.description}}</p>
+    <h2 class="zone-bosses-title">Bosses</h2>
+    <div class="zone-bosses" *ngIf="zoneResult.bosses">
+      <div class="zone-bosses-item" *ngFor="let boss of zoneResult.bosses">
+        <h4 class="zone-boss-name"><strong>Name:</strong> {{boss.name}}</h4>
+        <p class="boss-level" *ngIf="boss.level"><strong>Level:</strong> {{boss.level}}</p>
+        <p class="boss-health" *ngIf="boss.health"><strong>Health:</strong> {{boss.health}}</p>
+        <p class="zone-boss-description" *ngIf="boss.description"><strong>Description:</strong> {{boss.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>

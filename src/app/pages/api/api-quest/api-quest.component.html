@@ -1,0 +1,14 @@
+<div class="content-container">
+  <h1>Quest</h1>
+  <hr>
+  <div class="api-buttons-container">
+    <button class="api-button" (click)="getQuest(questInput.value)">Get Quest
+    </button><input class="api-input" type="text" placeholder="Quest ID" name="questInput" (keyup)="0" #questInput>
+  </div>
+
+  <div class="output-container" *ngIf="questResult">
+    <h2 class="quest-name"><strong>Quest:</strong> {{questResult.title}}</h2>
+    <p class="quest-level" *ngIf="questResult.level"><strong>Level:</strong> {{questResult.level}}</p>
+    <p class="quest-category" *ngIf="questResult.category"><strong>Location:</strong> {{questResult.category}}</p>
+  </div>
+</div>

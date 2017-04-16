@@ -1,0 +1,37 @@
+<div class="content-container">
+  <h1>Realm Status</h1>
+  <hr>
+  <div class="api-buttons-container">
+    <button class="api-button" (click)="getRealmStatus()">Get Realm Status</button>
+  </div>
+
+  <div class="output-container" *ngIf="realmStatusResults">
+    <div class="realmStatus-item" *ngFor="let realm of realmStatusResults.realms">
+      <h2 class="realm-name">Realm: {{realm.name}}</h2>
+      <h3 class="realm-locale"><strong>Locale:</strong></h3><p class="realm-locale">{{realm.locale}}</p>
+      <div class="realm-status" [ngSwitch]="realm.status">
+        <h3 class="realm-status-title">Status: </h3>
+        <p class="realm-status-up" *ngSwitchCase="true">UP</p>
+        <p class="realm-status-down" *ngSwitchCase="false">DOWN</p>
+      </div>
+      <div class="realm-queue" [ngSwitch]="realm.status">
+        <h3 class="realm-queue-title">Queue: </h3>
+        <p class="realm-queue-true" *ngSwitchCase="false">YES</p>
+        <p class="realm-queue-false" *ngSwitchCase="true">NO</p>
+      </div>
+      <div class="realm-population" [ngSwitch]="realm.population">
+        <h3 class="realm-population-title">Population: </h3>
+        <p class="realm-status-low" *ngSwitchCase="'low'">LOW</p>
+        <p class="realm-status-medium" *ngSwitchCase="'medium'">MEDIUM</p>
+        <p class="realm-status-high" *ngSwitchCase="'high'">HIGH</p>
+      </div>
+      <div class="connected-realms-container" *ngIf="realm.connected_realms.length > 1">
+        <h3 class="connected-realms-title">Connected Realms: </h3>
+        <div class="connected-realm-item" *ngFor="let connectedRealm of realm.connected_realms">
+          <p class="connected-realm-name">[ {{connectedRealm | uppercase}} ]</p>
+        </div>
+      </div>
+      <hr class="realm-status-seperator">
+    </div>
+  </div>
+</div>
