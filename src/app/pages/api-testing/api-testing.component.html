@@ -2,21 +2,27 @@
   <h1>API</h1>
   <hr>
   <div class="api-buttons-container">
+
     <div class="api-button-group">
       <button class="api-button" (click)="getBosses()">Get Bosses</button>
-      <button class="api-button" [disabled]="bossInput.value.length < 4" (click)="getBoss(bossInput.value)" >Get Boss
+      <button class="api-button" [disabled]="bossInput.value.length < 1" (click)="getBoss(bossInput.value)" >Get Boss
       </button><input class="api-input" type="text" placeholder="Boss ID" name="bossInput" (keyup)="0" #bossInput>
     </div>
+
     <div class="api-button-group">
       <button class="api-button" (click)="getZones()">Get Zones</button>
+      <button class="api-button" [disabled]="zoneInput.value.length < 1" (click)="getZone(zoneInput.value)" >Get Zone
+      </button><input class="api-input" type="text" placeholder="Zone ID" name="zoneInput" (keyup)="0" #zoneInput>
     </div>
+
     <div class="api-button-group">
       <button class="api-button" (click)="getQuest(questInput.value)">Get Quest
       </button><input class="api-input" type="text" placeholder="Quest ID" name="questInput" (keyup)="0" #questInput>
     </div>
   </div>
   <hr>
-  <div class="bosses-container" *ngIf="bossesResults">
+
+  <div class="output-container" *ngIf="bossesResults">
     <div class="bosses-item" *ngFor="let boss of bossesResults.bosses">
       <h2 class="boss-name"><strong>Name:</strong> {{boss.name}}</h2>
       <p class="boss-id" *ngIf="boss.id"><strong>ID:</strong> {{boss.id}}</p>
@@ -26,14 +32,16 @@
       <hr>
     </div>
   </div>
-  <div class="boss-container" *ngIf="bossResult">
+
+  <div class="output-container" *ngIf="bossResult">
     <h2 class="bossResult-name"><strong>Name:</strong> {{bossResult.name}}</h2>
     <p class="boss-level" *ngIf="bossResult.level"><strong>Level:</strong> {{bossResult.level}}</p>
     <p class="boss-health" *ngIf="bossResult.health"><strong>Health:</strong> {{bossResult.health}}</p>
     <p class="boss-description" *ngIf="bossResult.description"><strong>Description:</strong> {{bossResult.description}}</p>
     <hr>
   </div>
-  <div class="zones-container" *ngIf="zonesResults">
+
+  <div class="output-container" *ngIf="zonesResults">
     <div class="zones-item" *ngFor="let zone of zonesResults.zones">
       <h2 class="zone-name">{{zone.name}}</h2>
       <p class="zone-description" *ngIf="zone.description">{{zone.description}}</p>
@@ -49,7 +57,22 @@
       <hr class="zone-seperator">
     </div>
   </div>
-  <div class="quest-container" *ngIf="questResult">
+
+  <div class="output-container" *ngIf="zoneResult">
+    <h2 class="zone-name">{{zoneResult.name}}</h2>
+    <p class="zone-description" *ngIf="zoneResult.description">{{zoneResult.description}}</p>
+    <h2 class="zone-bosses-title">Bosses</h2>
+    <div class="zone-bosses" *ngIf="zoneResult.bosses">
+      <div class="zone-bosses-item" *ngFor="let boss of zoneResult.bosses">
+        <h4 class="zone-boss-name"><strong>Name:</strong> {{boss.name}}</h4>
+        <p class="boss-level" *ngIf="boss.level"><strong>Level:</strong> {{boss.level}}</p>
+        <p class="boss-health" *ngIf="boss.health"><strong>Health:</strong> {{boss.health}}</p>
+        <p class="zone-boss-description" *ngIf="boss.description"><strong>Description:</strong> {{boss.description}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="output-container" *ngIf="questResult">
     <h2 class="quest-name"><strong>Quest:</strong> {{questResult.title}}</h2>
     <p class="quest-level" *ngIf="questResult.level"><strong>Level:</strong> {{questResult.level}}</p>
     <p class="quest-category" *ngIf="questResult.category"><strong>Location:</strong> {{questResult.category}}</p>

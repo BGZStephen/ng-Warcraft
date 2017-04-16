@@ -16,6 +16,7 @@ export class ApiTestingComponent implements OnInit {
   bossResult: object;
 
   zonesResults: object;
+  zoneResult: object;
 
   questResult: object;
 
@@ -46,6 +47,15 @@ export class ApiTestingComponent implements OnInit {
     this.apiSearch.getZones()
     .subscribe(res => {
       this.zonesResults = res
+      // console.log(this.zonesResults)
+    })
+  }
+
+  getZone(id) {
+    this.clearResults() // clear results to allow for multiple searches
+    this.apiSearch.getZone(id)
+    .subscribe(res => {
+      this.zoneResult = res
       // console.log(this.zonesResults)
     })
   }
