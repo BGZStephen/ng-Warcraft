@@ -23,15 +23,32 @@ hr {
 /* API CALLING TOOLS */
 
 .api-buttons-container {
+  display: flex;
   margin: 10px 0;
   width: 100%;
 }
 
-.api-button {
+.api-button-group {
+  padding-right: 10px;
+  width: auto;
+}
+
+.api-button,
+.api-button:disabled {
   background: #57b037;
+  color: black;
   font-size: 1.2em;
   padding: 5px 10px;
   border: 2px solid #50a033;
+}
+
+.api-input {
+  background: none;
+  border: 2px solid #50a033;
+  color: white;
+  font-size: 1.2em;
+  padding: 5px 10px;
+  width: 100px;
 }
 
 /* API CALLING TOOLS END */

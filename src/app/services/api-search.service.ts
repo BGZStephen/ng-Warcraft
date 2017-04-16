@@ -15,9 +15,24 @@ export class ApiSearchService {
     .map(res => res.json())
   }
 
+  getBoss(id) {
+    console.log("ID", id)
+    let requestUrl = "https://eu.api.battle.net/wow/boss/"+id+"?locale=en_GB&apikey="+this.apiKey
+    return this.http.get(requestUrl)
+    .map(res => res.json())
+  }
+
   getZones() {
     let requestUrl = "https://eu.api.battle.net/wow/zone/?locale=en_GB&apikey="+this.apiKey
     return this.http.get(requestUrl)
     .map(res => res.json())
   }
+
+  getQuests() {
+    let requestUrl = "https://eu.api.battle.net/wow/quest/13146?locale=en_GB&apikey="+this.apiKey
+    return this.http.get(requestUrl)
+    .map(res => res.json())
+  }
+
+
 }

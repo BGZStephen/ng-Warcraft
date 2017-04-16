@@ -2,18 +2,35 @@
   <h1>API</h1>
   <hr>
   <div class="api-buttons-container">
-    <button class="api-button" (click)="getBosses()">Get Bosses</button>
-    <button class="api-button" (click)="getZones()">Get Zones</button>
+    <div class="api-button-group">
+      <button class="api-button" (click)="getBosses()">Get Bosses</button>
+      <button class="api-button" [disabled]="bossInput.value.length < 4" (click)="getBoss(bossInput.value)" >Get Boss</button>
+      <input class="api-input" type="text" placeholder="Boss ID" name="bossInput" (keyup)="0" #bossInput>
+    </div>
+    <div class="api-button-group">
+      <button class="api-button" (click)="getZones()">Get Zones</button>
+    </div>
+    <div class="api-button-group">
+      <button class="api-button" (click)="getQuests()">Get Quests</button>
+    </div>
   </div>
   <hr>
   <div class="bosses-container" *ngIf="bossesResults">
     <div class="bosses-item" *ngFor="let boss of bossesResults.bosses">
       <h2 class="boss-name"><strong>Name:</strong> {{boss.name}}</h2>
+      <p class="boss-id" *ngIf="boss.id"><strong>ID:</strong> {{boss.id}}</p>
       <p class="boss-level" *ngIf="boss.level"><strong>Level:</strong> {{boss.level}}</p>
       <p class="boss-health" *ngIf="boss.health"><strong>Health:</strong> {{boss.health}}</p>
       <p class="boss-description" *ngIf="boss.description"><strong>Description:</strong> {{boss.description}}</p>
       <hr>
     </div>
+  </div>
+  <div class="boss-container" *ngIf="bossResult">
+    <h2 class="bossResult-name"><strong>Name:</strong> {{bossResult.name}}</h2>
+    <p class="boss-level" *ngIf="bossResult.level"><strong>Level:</strong> {{bossResult.level}}</p>
+    <p class="boss-health" *ngIf="bossResult.health"><strong>Health:</strong> {{bossResult.health}}</p>
+    <p class="boss-description" *ngIf="bossResult.description"><strong>Description:</strong> {{bossResult.description}}</p>
+    <hr>
   </div>
   <div class="zones-container" *ngIf="zonesResults">
     <div class="zones-item" *ngFor="let zone of zonesResults.zones">
