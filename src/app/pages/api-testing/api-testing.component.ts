@@ -20,6 +20,8 @@ export class ApiTestingComponent implements OnInit {
 
   questResult: object;
 
+  realmStatusResults: object;
+
   clearResults() {
     this.bossesResults = {}
   }
@@ -65,7 +67,16 @@ export class ApiTestingComponent implements OnInit {
     this.apiSearch.getQuest(id)
     .subscribe(res => {
       this.questResult = res
-      console.log(this.questResult)
+      // console.log(this.questResult)
+    })
+  }
+
+  getRealmStatus() {
+    this.clearResults() // clear results to allow for multiple searches
+    this.apiSearch.getRealmStatus()
+    .subscribe(res => {
+      this.realmStatusResults = res
+      console.log(this.realmStatusResults)
     })
   }
 

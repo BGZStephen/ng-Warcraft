@@ -40,5 +40,11 @@ export class ApiSearchService {
     .map(res => res.json())
   }
 
+  getRealmStatus() {
+    let requestUrl = "https://eu.api.battle.net/wow/realm/status?locale=en_GB&apikey="+this.apiKey
+    return this.http.get(requestUrl)
+    .map(res => res.json())
+  }
+
 
 }

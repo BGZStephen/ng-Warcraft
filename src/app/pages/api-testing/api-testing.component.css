@@ -109,10 +109,63 @@ hr {
   margin-bottom: 30px;
 }
 
-.zone-seperator {
+.zone-seperator,
+.realm-status-seperator {
   margin: 20px 0 15px;
 }
 
 /* ZONES OUTPUT END */
 
 /* QUEST OUTPUT */
+
+/* QUEST OUTPUT END */
+
+/* REALM STATUS */
+
+.realmStatus-item {
+  margin: 20px 0;
+}
+
+.realm-name {
+  font-size: 1.3em;
+}
+
+.realm-status-title,
+.realm-population-title,
+.connected-realms-title,
+.realm-queue-title,
+.realm-locale {
+  display: inline;
+  margin-right: 10px;
+}
+
+.realm-status-up,
+.realm-status-low,
+.realm-queue-false {
+  color: green;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.realm-status-down,
+.realm-status-high,
+.realm-queue-true {
+  color: red;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.realm-status-medium {
+  color: yellow;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.connected-realm-item {
+  display: inline-block;
+}
+
+.connected-realm-name {
+  display: inline-block;
+  margin: 5px 0;
+}
