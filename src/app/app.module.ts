@@ -10,6 +10,7 @@ import { ApiTestingComponent } from './pages/api-testing/api-testing.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NewsCarouselComponent } from './carousels/news-carousel/news-carousel.component';
+import { ApiRootComponent } from './pages/api/api-root/api-root.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NewsCarouselComponent } from './carousels/news-carousel/news-carousel.c
     ApiTestingComponent,
     HomeComponent,
     NavbarComponent,
-    NewsCarouselComponent
+    NewsCarouselComponent,
+    ApiRootComponent
   ],
   imports: [
     BrowserModule,
