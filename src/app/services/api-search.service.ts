@@ -28,8 +28,8 @@ export class ApiSearchService {
     .map(res => res.json())
   }
 
-  getQuests() {
-    let requestUrl = "https://eu.api.battle.net/wow/quest/13146?locale=en_GB&apikey="+this.apiKey
+  getQuest(id) {
+    let requestUrl = "https://eu.api.battle.net/wow/quest/"+id+"?locale=en_GB&apikey="+this.apiKey
     return this.http.get(requestUrl)
     .map(res => res.json())
   }

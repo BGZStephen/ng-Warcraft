@@ -14,8 +14,10 @@ export class ApiTestingComponent implements OnInit {
 
   bossesResults: object;
   bossResult: object;
+
   zonesResults: object;
-  questsResults: object;
+
+  questResult: object;
 
   clearResults() {
     this.bossesResults = {}
@@ -48,12 +50,12 @@ export class ApiTestingComponent implements OnInit {
     })
   }
 
-  getQuests() {
+  getQuest(id) {
     this.clearResults() // clear results to allow for multiple searches
-    this.apiSearch.getQuests()
+    this.apiSearch.getQuest(id)
     .subscribe(res => {
-      this.questsResults = res
-      console.log(this.questsResults)
+      this.questResult = res
+      console.log(this.questResult)
     })
   }
 

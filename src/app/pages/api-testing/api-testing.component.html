@@ -4,14 +4,15 @@
   <div class="api-buttons-container">
     <div class="api-button-group">
       <button class="api-button" (click)="getBosses()">Get Bosses</button>
-      <button class="api-button" [disabled]="bossInput.value.length < 4" (click)="getBoss(bossInput.value)" >Get Boss</button>
-      <input class="api-input" type="text" placeholder="Boss ID" name="bossInput" (keyup)="0" #bossInput>
+      <button class="api-button" [disabled]="bossInput.value.length < 4" (click)="getBoss(bossInput.value)" >Get Boss
+      </button><input class="api-input" type="text" placeholder="Boss ID" name="bossInput" (keyup)="0" #bossInput>
     </div>
     <div class="api-button-group">
       <button class="api-button" (click)="getZones()">Get Zones</button>
     </div>
     <div class="api-button-group">
-      <button class="api-button" (click)="getQuests()">Get Quests</button>
+      <button class="api-button" (click)="getQuest(questInput.value)">Get Quest
+      </button><input class="api-input" type="text" placeholder="Quest ID" name="questInput" (keyup)="0" #questInput>
     </div>
   </div>
   <hr>
@@ -47,5 +48,10 @@
       </div>
       <hr class="zone-seperator">
     </div>
+  </div>
+  <div class="quest-container" *ngIf="questResult">
+    <h2 class="quest-name"><strong>Quest:</strong> {{questResult.title}}</h2>
+    <p class="quest-level" *ngIf="questResult.level"><strong>Level:</strong> {{questResult.level}}</p>
+    <p class="quest-category" *ngIf="questResult.category"><strong>Location:</strong> {{questResult.category}}</p>
   </div>
 </div>
