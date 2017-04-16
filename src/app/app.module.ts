@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NewsCarouselComponent } from './carousels/news-carousel/news-carousel.component';
-import { BossSearchService, ItemSearchService, QuestSearchService, RealmStatusSearchService, ZoneSearchService } from "./services/api/ApiCollection"
+import { BossSearchService, ItemSearchService, QuestSearchService, RealmStatusSearchService, ZoneSearchService } from "./services/api/barrel"
 import { ApiRootComponent } from './pages/api/api-root/api-root.component';
 import { ApiBossesComponent } from './pages/api/api-bosses/api-bosses.component';
 import { ApiItemComponent } from './pages/api/api-item/api-item.component';

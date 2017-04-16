@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ZoneSearchService } from "../../../services/api/barrel"
 
 @Component({
   selector: 'wow-api-zones',
@@ -7,10 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApiZonesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private zoneApiSearch: ZoneSearchService) { }
 
   zonesResults: object;
   zoneResult: object;
+
+  getZones() {
+    this.zoneApiSearch.getZones()
+    .subscribe(res => {
+      this.zonesResults = res
+      // console.log(this.bossesResults)
+    })
+  }
+
+  getZone(id) {
+    this.zoneApiSearch.getZone(id)
+    .subscribe(res => {
+      this.zoneResult = res
+      // console.log(this.bossesResults)
+    })
+  }
 
   ngOnInit() {
   }

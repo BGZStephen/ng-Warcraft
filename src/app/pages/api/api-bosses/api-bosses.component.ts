@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BossSearchService } from "../../../services/api/boss-search.service"
+import { BossSearchService } from "../../../services/api/barrel"
 
 @Component({
   selector: 'wow-api-bosses',
