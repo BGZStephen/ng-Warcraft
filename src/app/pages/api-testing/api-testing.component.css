@@ -1,0 +1,44 @@
+.content-container {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 100%;
+}
+
+.api-buttons-container {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.api-button {
+  background: #57b037;
+  font-size: 1.2em;
+  padding: 5px 10px;
+  border: 2px solid #50a033;
+}
+
+.bosses-container {
+
+}
+
+.bosses-item {
+  margin: 10px 0;
+}
+
+.boss-name,
+.boss-level,
+.boss-health,
+.boss-description {
+  margin: 5px 0;
+}
+
+h1 {
+  width: 100%;
+}
+
+hr {
+  border: 2px solid #50a033;
+  margin: 10px 0;
+  width: 10%;
+}

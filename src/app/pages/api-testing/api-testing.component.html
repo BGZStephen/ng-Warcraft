@@ -1,0 +1,17 @@
+<div class="content-container">
+  <h1>API</h1>
+  <hr>
+  <div class="api-buttons-container">
+    <button class="api-button" (click)="getBosses()">Get Bosses</button>
+  </div>
+  <hr>
+  <div class="bosses-container" *ngIf="bossesResults">
+    <div class="bosses-item" *ngFor="let boss of bossesResults.bosses">
+      <h2 class="boss-name"><strong>Name:</strong> {{boss.name}}</h2>
+      <p class="boss-level" *ngIf="boss.level"><strong>Level:</strong> {{boss.level}}</p>
+      <p class="boss-health" *ngIf="boss.health"><strong>Health:</strong> {{boss.health}}</p>
+      <p class="boss-description" *ngIf="boss.description"><strong>Description:</strong> {{boss.description}}</p>
+      <hr>
+    </div>
+  </div>
+</div>

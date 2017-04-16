@@ -6,7 +6,7 @@ import { router } from "./app.routes"
 import { ApiSearchService } from "./services/api-search.service"
 
 import { AppComponent } from './app.component';
-import { ApiTestingComponent } from './api-testing/api-testing.component';
+import { ApiTestingComponent } from './pages/api-testing/api-testing.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NewsCarouselComponent } from './carousels/news-carousel/news-carousel.component';

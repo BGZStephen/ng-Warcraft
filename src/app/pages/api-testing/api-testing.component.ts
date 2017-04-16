@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiSearchService } from "../services/api-search.service"
+import { ApiSearchService } from "../../services/api-search.service"
 
 @Component({
   selector: 'wow-api-testing',

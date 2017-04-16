@@ -1,6 +1,6 @@
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./pages/home/home.component";
-import { ApiTestingComponent } from "./api-testing/api-testing.component";
+import { ApiTestingComponent } from "./pages/api-testing/api-testing.component";
 
 const APP_ROUTES: Routes = [
   {path: '', component: HomeComponent},
