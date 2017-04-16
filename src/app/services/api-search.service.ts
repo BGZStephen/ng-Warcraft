@@ -16,8 +16,13 @@ export class ApiSearchService {
   }
 
   getBoss(id) {
-    console.log("ID", id)
     let requestUrl = "https://eu.api.battle.net/wow/boss/"+id+"?locale=en_GB&apikey="+this.apiKey
+    return this.http.get(requestUrl)
+    .map(res => res.json())
+  }
+
+  getItem(id) {
+    let requestUrl = "https://eu.api.battle.net/wow/item/"+id+"?locale=en_GB&apikey="+this.apiKey
     return this.http.get(requestUrl)
     .map(res => res.json())
   }
