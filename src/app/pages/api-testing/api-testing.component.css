@@ -1,3 +1,15 @@
+/* GENERAL STYLES */
+
+h1 {
+  width: 100%;
+}
+
+hr {
+  border: 2px solid #50a033;
+  margin: 10px 0;
+  width: 10%;
+}
+
 .content-container {
   color: white;
   display: flex;
@@ -5,6 +17,10 @@
   padding: 10px;
   width: 100%;
 }
+
+/* GENERAL STYLES END */
+
+/* API CALLING TOOLS */
 
 .api-buttons-container {
   margin: 10px 0;
@@ -17,6 +33,10 @@
   padding: 5px 10px;
   border: 2px solid #50a033;
 }
+
+/* API CALLING TOOLS END */
+
+/* BOSSES OUTPUT */
 
 .bosses-container {
 
@@ -33,12 +53,49 @@
   margin: 5px 0;
 }
 
-h1 {
-  width: 100%;
+/* BOSSES OUTPUT END */
+
+/* ZONES OUTPUT */
+
+.zones-container {
+
 }
 
-hr {
-  border: 2px solid #50a033;
+.zones-item {
   margin: 10px 0;
-  width: 10%;
 }
+
+.zone-name {
+
+}
+
+.zone-description {
+  margin: 10px 0;
+}
+
+.zone-bosses-title {
+  margin: 5px 0 10px;
+}
+
+.zone-bosses {
+  border: 2px solid #999;
+  padding: 5px;
+}
+
+.zone-bosses-item {
+
+}
+
+.zone-boss-name {
+  font-size: 1.3em;
+}
+
+.zone-boss-description {
+  margin-bottom: 30px;
+}
+
+.zone-seperator {
+  margin: 20px 0 15px;
+}
+
+/* ZONES OUTPUT END */

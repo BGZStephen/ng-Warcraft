@@ -14,4 +14,10 @@ export class ApiSearchService {
     return this.http.get(requestUrl)
     .map(res => res.json())
   }
+
+  getZones() {
+    let requestUrl = "https://eu.api.battle.net/wow/zone/?locale=en_GB&apikey="+this.apiKey
+    return this.http.get(requestUrl)
+    .map(res => res.json())
+  }
 }
