@@ -1,3 +1,19 @@
-<p>
-  api-mount works!
-</p>
+<div class="content-container">
+  <h1>Mounts</h1>
+  <hr>
+  <div class="api-buttons-container">
+    <button class="api-button" (click)="searchMounts()">Get Mounts</button>
+  </div>
+
+  <div class="output-container" *ngIf="mountResults">
+    <div class="output-item" *ngFor="let mount of mountResults.mounts">
+      <h3 class="output-name">{{mount.name}}</h3>
+      <p class="output-array-heading">Type: </p>
+        <p class="mount-description" [ngStyle]="trueFalseStyle(mount.isGround)">Ground</p>
+        <p class="mount-description" [ngStyle]="trueFalseStyle(mount.isFlying)">Flying</p>
+        <p class="mount-description" [ngStyle]="trueFalseStyle(mount.isJumping)">Jumping</p>
+        <p class="mount-description" [ngStyle]="trueFalseStyle(mount.isAquatic)">Aquatic</p>
+      <hr>
+    </div>
+  </div>
+</div>

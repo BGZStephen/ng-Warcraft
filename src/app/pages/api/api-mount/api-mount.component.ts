@@ -10,19 +10,27 @@ export class ApiMountComponent implements OnInit {
 
   constructor(private apiService: WowApiService) { }
 
-  mountResult: object;
+  mountResults: object;
 
   clearResults() {
-    this.mountResult = null
+    this.mountResults = null
   }
 
-  searchMount(id) {
+  searchMounts() {
     this.clearResults()
     this.apiService.apiSearch("Mount")
     .subscribe(res => {
-      this.mountResult = res
-      console.log(this.mountResult)
+      this.mountResults = res
+      console.log(this.mountResults)
     })
+  }
+
+  trueFalseStyle(result) {
+    if(result == true) {
+      return {"color": "green"}
+    } else {
+      return {"color": "red"}
+    }
   }
 
   ngOnInit() {

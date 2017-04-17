@@ -13,7 +13,6 @@ export class WowApiService {
     Achievement: "achievement/",
     Auction: "auction/data/",
     Boss: "boss/",
-    Challenge: "challenge/",
     Item: "item/",
     ItemSet: "item/set/",
     Mount: "mount/",

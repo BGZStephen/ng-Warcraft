@@ -5,7 +5,6 @@ export { ApiQuestComponent } from './api-quest/api-quest.component';
 export { ApiRealmStatusComponent } from './api-realm-status/api-realm-status.component';
 export { ApiAchievementComponent } from './api-achievement/api-achievement.component';
 export { ApiAuctionComponent } from './api-auction/api-auction.component';
-export { ApiChallengeComponent } from './api-challenge/api-challenge.component';
 export { ApiMountComponent } from './api-mount/api-mount.component';
 export { ApiPetComponent } from './api-pet/api-pet.component';
 export { ApiPvpComponent } from './api-pvp/api-pvp.component';
