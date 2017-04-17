@@ -1,3 +1,36 @@
-<p>
-  api-pet works!
-</p>
+<div class="content-container">
+  <h1>Pets</h1>
+  <hr>
+  <div class="api-buttons-container">
+    <button class="api-button" (click)="searchPets()">Get Pets</button>
+    <button class="api-button" [disabled]="abilityInput.value.length < 1" (click)="searchPetAbility(abilityInput.value)" >Get Ability
+    </button><input class="api-input" type="text" placeholder="Ability ID" name="abilityInput" (keyup)="0" #abilityInput>
+    <button class="api-button" [disabled]="speciesInput.value.length < 1" (click)="searchPetSpecies(speciesInput.value)" >Get Species
+    </button><input class="api-input" type="text" placeholder="Species ID" name="speciesInput" (keyup)="0" #speciesInput>
+    <button class="api-button" [disabled]="statsInput.value.length < 1" (click)="searchPetStats(statsInput.value)" >Get Stats
+    </button><input class="api-input" type="text" placeholder="Stat ID" name="statsInput" (keyup)="0" #statsInput>
+  </div>
+
+  <div class="output-container" *ngIf="petsResults">
+    <div class="output-item" *ngFor="let pet of petsResults.pets">
+      <h3 class="output-name">{{pet.name}}</h3>
+      <p class="output-description"><strong>Family: </strong>{{pet.family | titlecase}}</p>
+      <p class="output-description"><strong>Strong VS: </strong>{{pet.strongAgainst[0] | titlecase}}</p>
+      <p class="output-description"><strong>Weak VS: </strong>{{pet.weakAgainst[0] | titlecase}}</p>
+      <p class="output-array-heading"><strong>Base Stats:</strong> </p>
+      <p class="output-description health"><strong>Health: </strong>{{pet.stats.health}}</p>
+      <p class="output-description power"><strong>Power: </strong>{{pet.stats.power}}</p>
+      <p class="output-description speed"><strong>Speed: </strong>{{pet.stats.speed}}</p>
+      <hr>
+    </div>
+  </div>
+
+  <div class="output-container" *ngIf="petAbilityResults">
+  </div>
+
+  <div class="output-container" *ngIf="petSpeciesResults">
+  </div>
+
+  <div class="output-container" *ngIf="petStatsResults">
+  </div>
+</div>

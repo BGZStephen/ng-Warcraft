@@ -1,0 +1,19 @@
+.health {
+  color: red;
+}
+
+.power {
+  color: yellow;
+}
+
+.speed {
+  color: lightblue;
+}
+
+.health,
+.power,
+.speed {
+  display: inline-block;
+  font-weight: 700;
+  padding-right: 10px;
+}
