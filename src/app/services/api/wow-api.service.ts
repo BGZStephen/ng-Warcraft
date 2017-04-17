@@ -11,8 +11,19 @@ export class WowApiService {
   apiKey = "ny7cn7mpvjztbehsqemdwdy4xbz2tn7s"
   apiUrls = {
     Achievement: "achievement/",
+    Auction: "auction/data/",
     Boss: "boss/",
+    Challenge: "challenge/",
     Item: "item/",
+    ItemSet: "item/set/",
+    Mount: "mount/",
+    Pet: "pet/",
+    PetAbility: "pet/abilities/",
+    PetSpecies: "pet/species/",
+    PetStats: "pet/stats/",
+    PVP: "leaderboard/",
+    Recipe: "recipe/",
+    Spell: "spell/",
     Quest: "quest/",
     RealmStatus: "realm/status",
     Zone: "zone/"

@@ -15,6 +15,14 @@ import { ApiItemComponent } from './pages/api/api-item/api-item.component';
 import { ApiQuestComponent } from './pages/api/api-quest/api-quest.component';
 import { ApiRealmStatusComponent } from './pages/api/api-realm-status/api-realm-status.component';
 import { ApiZonesComponent } from './pages/api/api-zones/api-zones.component';
+import { ApiAchievementComponent } from './pages/api/api-achievement/api-achievement.component';
+import { ApiAuctionComponent } from './pages/api/api-auction/api-auction.component';
+import { ApiChallengeComponent } from './pages/api/api-challenge/api-challenge.component';
+import { ApiMountComponent } from './pages/api/api-mount/api-mount.component';
+import { ApiPvpComponent } from './pages/api/api-pvp/api-pvp.component';
+import { ApiRecipeComponent } from './pages/api/api-recipe/api-recipe.component';
+import { ApiSpellComponent } from './pages/api/api-spell/api-spell.component';
+import { ApiPetComponent } from './pages/api/api-pet/api-pet.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +35,15 @@ import { ApiZonesComponent } from './pages/api/api-zones/api-zones.component';
     ApiItemComponent,
     ApiQuestComponent,
     ApiRealmStatusComponent,
-    ApiZonesComponent
+    ApiZonesComponent,
+    ApiAchievementComponent,
+    ApiAuctionComponent,
+    ApiChallengeComponent,
+    ApiMountComponent,
+    ApiPvpComponent,
+    ApiRecipeComponent,
+    ApiSpellComponent,
+    ApiPetComponent
   ],
   imports: [
     BrowserModule,
