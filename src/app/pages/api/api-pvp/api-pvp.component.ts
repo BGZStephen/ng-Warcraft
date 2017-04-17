@@ -13,7 +13,7 @@ export class ApiPvpComponent implements OnInit {
   pvpResult: object;
 
   clearResults() {
-    this.pvpResult = {}
+    this.pvpResult = null
   }
 
   searchPvp(id) {

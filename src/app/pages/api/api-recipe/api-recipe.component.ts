@@ -13,7 +13,7 @@ export class ApiRecipeComponent implements OnInit {
   recipeResult: object;
 
   clearResults() {
-    this.recipeResult = {}
+    this.recipeResult = null
   }
 
   searchRecipe(id) {

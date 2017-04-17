@@ -13,7 +13,7 @@ export class ApiSpellComponent implements OnInit {
   spellResult: object;
 
   clearResults() {
-    this.spellResult = {}
+    this.spellResult = null
   }
 
   searchSpell(id) {

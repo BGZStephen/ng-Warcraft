@@ -14,7 +14,7 @@ export class ApiQuestComponent implements OnInit {
   questResult: object;
 
   clearResults() {
-    this.questResult = {}
+    this.questResult = null
   }
 
   searchQuest(id) {

@@ -13,7 +13,7 @@ export class ApiChallengeComponent implements OnInit {
   challengeResult: object;
 
   clearResults() {
-    this.challengeResult = {}
+    this.challengeResult = null
   }
 
   searchChallenge(id) {

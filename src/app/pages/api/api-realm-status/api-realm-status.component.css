@@ -1,0 +1,39 @@
+.output-array-heading,
+.realm-status-up,
+.realm-status-down,
+.realm-status-low,
+.realm-status-medium,
+.realm-status-high,
+.realm-queue-true,
+.realm-queue-false,
+.realm-locale {
+  display: inline;
+}
+
+.realm-status-up,
+.realm-status-low,
+.realm-queue-false {
+  color: green;
+  margin-left: 10px;
+}
+
+.realm-status-down,
+.realm-status-high {
+  color: red;
+  margin-left: 10px;
+}
+
+.realm-locale {
+  margin-left: 10px;
+}
+
+.realm-status-medium {
+  color: yellow;
+}
+
+.connected-realms-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0;
+}

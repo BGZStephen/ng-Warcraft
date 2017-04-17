@@ -14,7 +14,7 @@ export class ApiAchievementComponent implements OnInit {
   achievementResult: object;
 
   clearResults() {
-    this.achievementResult = {}
+    this.achievementResult = null
   }
 
   searchAchievement(id) {

@@ -16,10 +16,10 @@ export class ApiPetComponent implements OnInit {
   petStatsResult: object;
 
   clearResults() {
-    this.petResult = {},
-    this.petAbilityResult = {},
-    this.petSpeciesResult = {},
-    this.petStatsResult = {}
+    this.petResult = null,
+    this.petAbilityResult = null,
+    this.petSpeciesResult = null,
+    this.petStatsResult = null
   }
 
   searchPet() {

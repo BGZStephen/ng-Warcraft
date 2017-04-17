@@ -14,7 +14,7 @@ export class ApiItemComponent implements OnInit {
   itemResult: object;
 
   clearResults() {
-    this.itemResult = {}
+    this.itemResult = null
   }
 
   searchItem(id) {

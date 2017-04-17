@@ -15,8 +15,8 @@ export class ApiZonesComponent implements OnInit {
   zoneResult: object;
 
   clearResults() {
-    this.zonesResults = {},
-    this.zoneResult = {}
+    this.zonesResults = null,
+    this.zoneResult = null
   }
 
   searchZones() {

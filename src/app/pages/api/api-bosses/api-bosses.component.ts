@@ -14,8 +14,8 @@ export class ApiBossesComponent {
   bossResult: object;
 
   clearResults() {
-    this.bossesResults = {},
-    this.bossResult = {}
+    this.bossesResults = null,
+    this.bossResult = null
   }
 
   searchBoss(id) {

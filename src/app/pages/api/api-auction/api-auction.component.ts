@@ -13,7 +13,7 @@ export class ApiAuctionComponent implements OnInit {
   auctionResult: object;
 
   clearResults() {
-    this.auctionResult = {}
+    this.auctionResult = null
   }
 
   searchAuction(id) {

@@ -14,7 +14,7 @@ export class ApiRealmStatusComponent implements OnInit {
   realmStatusResults: object;
 
   clearResults() {
-    this.realmStatusResults = {}
+    this.realmStatusResults = null
   }
 
   searchRealmStatus() {

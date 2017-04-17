@@ -13,7 +13,7 @@ export class ApiMountComponent implements OnInit {
   mountResult: object;
 
   clearResults() {
-    this.mountResult = {}
+    this.mountResult = null
   }
 
   searchMount(id) {
