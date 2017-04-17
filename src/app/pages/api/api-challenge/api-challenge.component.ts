@@ -8,7 +8,22 @@ import { WowApiService } from "../../../services/api/wow-api.service"
 })
 export class ApiChallengeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService: WowApiService) { }
+
+  challengeResult: object;
+
+  clearResults() {
+    this.challengeResult = {}
+  }
+
+  searchChallenge(id) {
+    this.clearResults()
+    this.apiService.apiSearch("Challenge", id)
+    .subscribe(res => {
+      this.challengeResult = res
+      console.log(this.challengeResult)
+    })
+  }
 
   ngOnInit() {
   }

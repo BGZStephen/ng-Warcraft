@@ -8,7 +8,22 @@ import { WowApiService } from "../../../services/api/wow-api.service"
 })
 export class ApiRecipeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService: WowApiService) { }
+
+  recipeResult: object;
+
+  clearResults() {
+    this.recipeResult = {}
+  }
+
+  searchRecipe(id) {
+    this.clearResults()
+    this.apiService.apiSearch("Recipe", id)
+    .subscribe(res => {
+      this.recipeResult = res
+      console.log(this.recipeResult)
+    })
+  }
 
   ngOnInit() {
   }

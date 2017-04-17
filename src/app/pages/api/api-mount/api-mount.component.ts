@@ -8,7 +8,22 @@ import { WowApiService } from "../../../services/api/wow-api.service"
 })
 export class ApiMountComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService: WowApiService) { }
+
+  mountResult: object;
+
+  clearResults() {
+    this.mountResult = {}
+  }
+
+  searchMount(id) {
+    this.clearResults()
+    this.apiService.apiSearch("Mount")
+    .subscribe(res => {
+      this.mountResult = res
+      console.log(this.mountResult)
+    })
+  }
 
   ngOnInit() {
   }

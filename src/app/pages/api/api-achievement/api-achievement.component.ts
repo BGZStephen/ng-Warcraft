@@ -11,18 +11,18 @@ export class ApiAchievementComponent implements OnInit {
 
   constructor(private apiService: WowApiService) { }
 
-  itemResult: object;
+  achievementResult: object;
 
   clearResults() {
-    this.itemResult = {}
+    this.achievementResult = {}
   }
 
-  searchItem(id) {
+  searchAchievement(id) {
     this.clearResults()
-    this.apiService.apiSearch("Item", id)
+    this.apiService.apiSearch("Achievement", id)
     .subscribe(res => {
-      this.itemResult = res
-      // console.log(this.bossesResults)
+      this.achievementResult = res
+      console.log(this.achievementResult)
     })
   }
 
