@@ -1,3 +1,25 @@
-<p>
-  api-achievement works!
-</p>
+<div class="content-container">
+  <h1>Achievement</h1>
+  <hr>
+  <div class="api-buttons-container">
+    <button class="api-button" [disabled]="achievementInput.value.length < 1" (click)="searchAchievement(achievementInput.value)">Get Achievement
+    </button><input class="api-input" type="text" placeholder="Achievement ID" name="achievementInput" (keyup)="0" #achievementInput>
+  </div>
+
+  <div class="output-container" *ngIf="achievementResult">
+    <h3 class="output-name" *ngIf="achievementResult.title"><strong>Achievement:</strong> {{achievementResult.title}}</h3>
+    <p class="output-description" *ngIf="achievementResult.description"><strong>Description:</strong> {{achievementResult.description}}</p>
+    <div class="output-array-container">
+      <h3 class="output-array-heading">Criteria: </h3>
+      <ul class="output-array-list">
+        <li class="output-array-item" *ngFor="let criteria of achievementResult.criteria">{{criteria.description}}</li>
+      </ul>
+    </div>
+    <div class="output-array-container">
+      <h3 class="output-array-heading">Rewards: </h3>
+      <ul class="output-array-list">
+        <li class="output-array-item" *ngFor="let reward of achievementResult.rewardItems">{{reward.name}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

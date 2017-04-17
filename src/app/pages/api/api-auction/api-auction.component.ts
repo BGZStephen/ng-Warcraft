@@ -4,7 +4,7 @@ import { WowApiService } from "../../../services/api/wow-api.service"
 @Component({
   selector: 'wow-api-auction',
   templateUrl: './api-auction.component.html',
-  styleUrls: ['./api-auction.component.css']
+  styleUrls: ['./api-auction.component.css', '../shared/shared.css']
 })
 export class ApiAuctionComponent implements OnInit {
 

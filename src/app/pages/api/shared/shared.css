@@ -19,11 +19,6 @@ hr {
   width: 100%;
 }
 
-.output-container {
-  width: 100%;
-  color: white;
-}
-
 /* API CALLING TOOLS */
 
 .api-buttons-container {
@@ -50,5 +45,39 @@ hr {
   font-size: 1.2em;
   margin: 0px 10px 10px -12px;
   padding: 5px 10px;
-  width: 120px;
+  width: 150px;
+}
+
+/* OUTPUT STYLES */
+
+.output-container {
+  width: 100%;
+  color: white;
+}
+
+.output-name {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+.output-description {
+  margin: 5px 0;
+}
+
+.output-array-container {
+  margin-bottom: 5px;
+}
+
+.output-array-heading {
+  font-size: 1.4em;
+  margin-top: 10px;
+}
+
+.output-array-list {
+  /*list-style: none;*/
+  margin: 5px 0;
+}
+
+.output-array-item {
+  margin: 5px 0 0 25px;
 }

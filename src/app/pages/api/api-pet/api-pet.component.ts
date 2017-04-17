@@ -4,7 +4,7 @@ import { WowApiService } from "../../../services/api/wow-api.service"
 @Component({
   selector: 'wow-api-pet',
   templateUrl: './api-pet.component.html',
-  styleUrls: ['./api-pet.component.css']
+  styleUrls: ['./api-pet.component.css', '../shared/shared.css']
 })
 export class ApiPetComponent implements OnInit {
 

@@ -4,7 +4,7 @@ import { WowApiService } from "../../../services/api/wow-api.service"
 @Component({
   selector: 'wow-api-pvp',
   templateUrl: './api-pvp.component.html',
-  styleUrls: ['./api-pvp.component.css']
+  styleUrls: ['./api-pvp.component.css', '../shared/shared.css']
 })
 export class ApiPvpComponent implements OnInit {
 

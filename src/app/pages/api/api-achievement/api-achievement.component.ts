@@ -5,7 +5,7 @@ import { WowApiService } from "../../../services/api/wow-api.service"
 @Component({
   selector: 'wow-api-achievement',
   templateUrl: './api-achievement.component.html',
-  styleUrls: ['./api-achievement.component.css']
+  styleUrls: ['./api-achievement.component.css', '../shared/shared.css']
 })
 export class ApiAchievementComponent implements OnInit {
 

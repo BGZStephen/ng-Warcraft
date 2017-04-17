@@ -4,7 +4,7 @@ import { WowApiService } from "../../../services/api/wow-api.service"
 @Component({
   selector: 'wow-api-spell',
   templateUrl: './api-spell.component.html',
-  styleUrls: ['./api-spell.component.css']
+  styleUrls: ['./api-spell.component.css', '../shared/shared.css']
 })
 export class ApiSpellComponent implements OnInit {
 
