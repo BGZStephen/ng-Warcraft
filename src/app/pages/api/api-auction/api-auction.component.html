@@ -1,3 +1,13 @@
-<p>
-  api-auction works!
-</p>
+<div class="content-container">
+  <h1>Auctions</h1>
+  <hr>
+  <div class="api-buttons-container">
+    <button class="api-button" [disabled]="auctionInput.value.length < 1" (click)="searchAuction(auctionInput.value)">Get Achievement
+    </button><input class="api-input" type="text" placeholder="Realm" name="auctionInput" (keyup)="0" #auctionInput>
+  </div>
+
+  <div class="output-container" *ngIf="auctionResult">
+    <h3 class="output-name">File: <a href="{{auctionResult.files[0].url}}" target="_blank">Click me.</a></h3>
+    <p class="output-description"><strong>Last updated:</strong>{{auctionResult.files[0].lastModified | date}}
+  </div>
+</div>
