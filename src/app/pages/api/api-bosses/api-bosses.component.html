@@ -7,22 +7,22 @@
     </button><input class="api-input" type="text" placeholder="Boss ID" name="bossInput" (keyup)="0" #bossInput>
   </div>
 
-  <div class="output-container bosses-container" *ngIf="bossesResults">
-    <div class="bosses-item" *ngFor="let boss of bossesResults.bosses">
-      <h2 class="boss-name"><strong>Name:</strong> {{boss.name}}</h2>
-      <p class="boss-id" *ngIf="boss.id"><strong>ID:</strong> {{boss.id}}</p>
-      <p class="boss-level" *ngIf="boss.level"><strong>Level:</strong> {{boss.level}}</p>
-      <p class="boss-health" *ngIf="boss.health"><strong>Health:</strong> {{boss.health}}</p>
-      <p class="boss-description" *ngIf="boss.description"><strong>Description:</strong> {{boss.description}}</p>
+  <div class="output-container" *ngIf="bossesResults">
+    <div class="output-item" *ngFor="let boss of bossesResults.bosses">
+      <h2 class="output-name"><strong>Name:</strong> {{boss.name}}</h2>
+      <p class="output-description" *ngIf="boss.id"><strong>ID:</strong> {{boss.id}}</p>
+      <p class="output-description" *ngIf="boss.level"><strong>Level:</strong> {{boss.level}}</p>
+      <p class="output-description" *ngIf="boss.health"><strong>Health:</strong> {{boss.health}}</p>
+      <p class="output-description" *ngIf="boss.description"><strong>Description:</strong> {{boss.description}}</p>
       <hr>
     </div>
   </div>
 
-  <div class="output-container boss-container" *ngIf="bossResult">
-    <h2 class="bossResult-name"><strong>Name:</strong> {{bossResult.name}}</h2>
-    <p class="boss-level" *ngIf="bossResult.level"><strong>Level:</strong> {{bossResult.level}}</p>
-    <p class="boss-health" *ngIf="bossResult.health"><strong>Health:</strong> {{bossResult.health}}</p>
-    <p class="boss-description" *ngIf="bossResult.description"><strong>Description:</strong> {{bossResult.description}}</p>
+  <div class="output-container" *ngIf="bossResult">
+    <h2 class="output-name"><strong>Name:</strong> {{bossResult.name}}</h2>
+    <p class="output-description" *ngIf="bossResult.level"><strong>Level:</strong> {{bossResult.level}}</p>
+    <p class="output-description" *ngIf="bossResult.health"><strong>Health:</strong> {{bossResult.health}}</p>
+    <p class="output-description" *ngIf="bossResult.description"><strong>Description:</strong> {{bossResult.description}}</p>
     <hr>
   </div>
 </div>

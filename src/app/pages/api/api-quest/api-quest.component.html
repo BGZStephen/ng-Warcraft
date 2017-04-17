@@ -7,8 +7,8 @@
   </div>
 
   <div class="output-container" *ngIf="questResult">
-    <h2 class="quest-name"><strong>Quest:</strong> {{questResult.title}}</h2>
-    <p class="quest-level" *ngIf="questResult.level"><strong>Level:</strong> {{questResult.level}}</p>
-    <p class="quest-category" *ngIf="questResult.category"><strong>Location:</strong> {{questResult.category}}</p>
+    <h2 class="output-name"><strong>Quest:</strong> {{questResult.title}}</h2>
+    <p class="output-description" *ngIf="questResult.level"><strong>Level:</strong> {{questResult.level}}</p>
+    <p class="output-description" *ngIf="questResult.category"><strong>Location:</strong> {{questResult.category}}</p>
   </div>
 </div>

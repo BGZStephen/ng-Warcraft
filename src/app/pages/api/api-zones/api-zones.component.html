@@ -8,32 +8,32 @@
   </div>
 
   <div class="output-container" *ngIf="zonesResults">
-    <div class="zones-item" *ngFor="let zone of zonesResults.zones">
-      <h2 class="zone-name">{{zone.name}}</h2>
-      <p class="zone-description" *ngIf="zone.description">{{zone.description}}</p>
+    <div class="output-item" *ngFor="let zone of zonesResults.zones">
+      <h2 class="output-name">{{zone.name}}</h2>
+      <p class="output-description" *ngIf="zone.description">{{zone.description}}</p>
       <h2 class="zone-bosses-title">Bosses</h2>
       <div class="zone-bosses" *ngIf="zone.bosses">
         <div class="zone-bosses-item" *ngFor="let boss of zone.bosses">
-          <h4 class="zone-boss-name"><strong>Name:</strong> {{boss.name}}</h4>
-          <p class="boss-level" *ngIf="boss.level"><strong>Level:</strong> {{boss.level}}</p>
-          <p class="boss-health" *ngIf="boss.health"><strong>Health:</strong> {{boss.health}}</p>
-          <p class="zone-boss-description" *ngIf="boss.description"><strong>Description:</strong> {{boss.description}}</p>
+          <h4 class="output-name"><strong>Name:</strong> {{boss.name}}</h4>
+          <p class="output-description" *ngIf="boss.level"><strong>Level:</strong> {{boss.level}}</p>
+          <p class="output-description" *ngIf="boss.health"><strong>Health:</strong> {{boss.health}}</p>
+          <p class="output-description" *ngIf="boss.description"><strong>Description:</strong> {{boss.description}}</p>
         </div>
       </div>
-      <hr class="zone-seperator">
+      <hr>
     </div>
   </div>
 
   <div class="output-container" *ngIf="zoneResult">
-    <h2 class="zone-name">{{zoneResult.name}}</h2>
-    <p class="zone-description" *ngIf="zoneResult.description">{{zoneResult.description}}</p>
-    <h2 class="zone-bosses-title">Bosses</h2>
+    <h2 class="output-name">{{zoneResult.name}}</h2>
+    <p class="output-description" *ngIf="zoneResult.description">{{zoneResult.description}}</p>
+    <h2 class="output-name">Bosses</h2>
     <div class="zone-bosses" *ngIf="zoneResult.bosses">
       <div class="zone-bosses-item" *ngFor="let boss of zoneResult.bosses">
-        <h4 class="zone-boss-name"><strong>Name:</strong> {{boss.name}}</h4>
-        <p class="boss-level" *ngIf="boss.level"><strong>Level:</strong> {{boss.level}}</p>
-        <p class="boss-health" *ngIf="boss.health"><strong>Health:</strong> {{boss.health}}</p>
-        <p class="zone-boss-description" *ngIf="boss.description"><strong>Description:</strong> {{boss.description}}</p>
+        <h4 class="output-name"><strong>Name:</strong> {{boss.name}}</h4>
+        <p class="output-description" *ngIf="boss.level"><strong>Level:</strong> {{boss.level}}</p>
+        <p class="output-description" *ngIf="boss.health"><strong>Health:</strong> {{boss.health}}</p>
+        <p class="output-description" *ngIf="boss.description"><strong>Description:</strong> {{boss.description}}</p>
       </div>
     </div>
   </div>
