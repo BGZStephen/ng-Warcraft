@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BossSearchService } from "../../../services/api/barrel"
+import { WowApiService } from "../../../services/api/wow-api.service"
 
 @Component({
   selector: 'wow-api-bosses',
@@ -8,24 +8,31 @@ import { BossSearchService } from "../../../services/api/barrel"
 })
 export class ApiBossesComponent {
 
-  constructor(private bossApiSearch: BossSearchService) { }
+  constructor(private apiService: WowApiService) { }
 
   bossesResults: object;
   bossResult: object;
 
-  getBosses() {
-    this.bossApiSearch.getBosses()
-    .subscribe(res => {
-      this.bossesResults = res
-      // console.log(this.bossesResults)
-    })
+  clearResults() {
+    this.bossesResults = {},
+    this.bossResult = {}
   }
 
-  getBoss(id) {
-    this.bossApiSearch.getBoss(id)
+  searchBoss(id) {
+    this.clearResults()
+    this.apiService.apiSearch("Boss", id)
     .subscribe(res => {
       this.bossResult = res
       console.log(this.bossResult)
+    })
+  }
+
+  searchBosses() {
+    this.clearResults()
+    this.apiService.apiSearch("Boss")
+    .subscribe(res => {
+      this.bossesResults = res
+      console.log(this.bossesResults)
     })
   }
 

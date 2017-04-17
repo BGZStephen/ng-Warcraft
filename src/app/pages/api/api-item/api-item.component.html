@@ -2,7 +2,7 @@
   <h1>Item</h1>
   <hr>
   <div class="api-buttons-container">
-    <button class="api-button" [disabled]="itemInput.value.length < 1" (click)="getItem(itemInput.value)">Get Item
+    <button class="api-button" [disabled]="itemInput.value.length < 1" (click)="searchItem(itemInput.value)">Get Item
     </button><input class="api-input" type="text" placeholder="Item ID" name="itemInput" (keyup)="0" #itemInput>
   </div>
 

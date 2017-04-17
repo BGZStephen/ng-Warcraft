@@ -2,8 +2,8 @@
   <h1>Bosses</h1>
   <hr>
   <div class="api-buttons-container">
-    <button class="api-button" (click)="getBosses()">Get Bosses</button>
-    <button class="api-button" [disabled]="bossInput.value.length < 1" (click)="getBoss(bossInput.value)" >Get Boss
+    <button class="api-button" (click)="searchBosses()">Get Bosses</button>
+    <button class="api-button" [disabled]="bossInput.value.length < 1" (click)="searchBoss(bossInput.value)" >Get Boss
     </button><input class="api-input" type="text" placeholder="Boss ID" name="bossInput" (keyup)="0" #bossInput>
   </div>
 

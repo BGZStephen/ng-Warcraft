@@ -2,8 +2,8 @@
   <h1>Zones</h1>
   <hr>
   <div class="api-buttons-container">
-    <button class="api-button" (click)="getZones()">Get Zones</button>
-    <button class="api-button" [disabled]="zoneInput.value.length < 1" (click)="getZone(zoneInput.value)" >Get Zone
+    <button class="api-button" (click)="searchZones()">Get Zones</button>
+    <button class="api-button" [disabled]="zoneInput.value.length < 1" (click)="searchZone(zoneInput.value)" >Get Zone
     </button><input class="api-input" type="text" placeholder="Zone ID" name="zoneInput" (keyup)="0" #zoneInput>
   </div>
 

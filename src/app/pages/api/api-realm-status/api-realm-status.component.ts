@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RealmStatusSearchService } from "../../../services/api/barrel"
+import { WowApiService } from "../../../services/api/wow-api.service"
+
 
 @Component({
   selector: 'wow-api-realm-status',
@@ -8,12 +9,17 @@ import { RealmStatusSearchService } from "../../../services/api/barrel"
 })
 export class ApiRealmStatusComponent implements OnInit {
 
-  constructor(private realmStatusApiSearch: RealmStatusSearchService) { }
+  constructor(private apiService: WowApiService) { }
 
   realmStatusResults: object;
 
-  getRealmStatus() {
-    this.realmStatusApiSearch.getRealmStatus()
+  clearResults() {
+    this.realmStatusResults = {}
+  }
+
+  searchRealmStatus() {
+    this.clearResults()
+    this.apiService.apiSearch("RealmStatus")
     .subscribe(res => {
       this.realmStatusResults = res
       // console.log(this.bossesResults)

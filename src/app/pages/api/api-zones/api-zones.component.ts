@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ZoneSearchService } from "../../../services/api/barrel"
+import { WowApiService } from "../../../services/api/wow-api.service"
+
 
 @Component({
   selector: 'wow-api-zones',
@@ -8,21 +9,28 @@ import { ZoneSearchService } from "../../../services/api/barrel"
 })
 export class ApiZonesComponent implements OnInit {
 
-  constructor(private zoneApiSearch: ZoneSearchService) { }
+  constructor(private apiService: WowApiService) { }
 
   zonesResults: object;
   zoneResult: object;
 
-  getZones() {
-    this.zoneApiSearch.getZones()
+  clearResults() {
+    this.zonesResults = {},
+    this.zoneResult = {}
+  }
+
+  searchZones() {
+    this.clearResults()
+    this.apiService.apiSearch("Zone")
     .subscribe(res => {
       this.zonesResults = res
-      // console.log(this.bossesResults)
+      console.log(this.zonesResults)
     })
   }
 
-  getZone(id) {
-    this.zoneApiSearch.getZone(id)
+  searchZone(id) {
+    this.clearResults()
+    this.apiService.apiSearch("Zone", id)
     .subscribe(res => {
       this.zoneResult = res
       // console.log(this.bossesResults)

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ItemSearchService } from "../../../services/api/barrel"
+import { WowApiService } from "../../../services/api/wow-api.service"
+
 
 @Component({
   selector: 'wow-api-item',
@@ -8,12 +9,17 @@ import { ItemSearchService } from "../../../services/api/barrel"
 })
 export class ApiItemComponent implements OnInit {
 
-  constructor(private itemApiSearch: ItemSearchService) { }
+  constructor(private apiService: WowApiService) { }
 
   itemResult: object;
 
-  getItem(id) {
-    this.itemApiSearch.getItem(id)
+  clearResults() {
+    this.itemResult = {}
+  }
+
+  searchItem(id) {
+    this.clearResults()
+    this.apiService.apiSearch("Item", id)
     .subscribe(res => {
       this.itemResult = res
       // console.log(this.bossesResults)

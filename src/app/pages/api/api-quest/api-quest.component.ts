@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { QuestSearchService } from "../../../services/api/barrel"
+import { WowApiService } from "../../../services/api/wow-api.service"
+
 
 @Component({
   selector: 'wow-api-quest',
@@ -8,12 +9,17 @@ import { QuestSearchService } from "../../../services/api/barrel"
 })
 export class ApiQuestComponent implements OnInit {
 
-  constructor(private questApiSearch: QuestSearchService) { }
+  constructor(private apiService: WowApiService) { }
 
   questResult: object;
 
-  getQuest(id) {
-    this.questApiSearch.getQuest(id)
+  clearResults() {
+    this.questResult = {}
+  }
+
+  searchQuest(id) {
+    this.clearResults()
+    this.apiService.apiSearch("Quest", id)
     .subscribe(res => {
       this.questResult = res
       // console.log(this.bossesResults)
