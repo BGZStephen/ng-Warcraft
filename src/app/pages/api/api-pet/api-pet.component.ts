@@ -49,15 +49,6 @@ export class ApiPetComponent implements OnInit {
     })
   }
 
-  searchPetStats(id) {
-    this.clearResults()
-    this.apiService.apiSearch("PetStats", id)
-    .subscribe(res => {
-      this.petStatsResults = res
-      console.log(this.petStatsResults)
-    })
-  }
-
   ngOnInit() {
   }
 

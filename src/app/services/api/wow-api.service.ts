@@ -17,7 +17,7 @@ export class WowApiService {
     ItemSet: "item/set/",
     Mount: "mount/",
     Pet: "pet/",
-    PetAbility: "pet/abilities/",
+    PetAbility: "pet/ability/",
     PetSpecies: "pet/species/",
     PetStats: "pet/stats/",
     PVP: "leaderboard/",

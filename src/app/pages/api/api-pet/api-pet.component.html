@@ -26,9 +26,23 @@
   </div>
 
   <div class="output-container" *ngIf="petAbilityResults">
+    <h3 class="output-name">{{petAbilityResults.name}}</h3>
+    <p class="output-description"><strong>Rounds: </strong>{{petAbilityResults.rounds}}</p>
+    <p class="output-description"><strong>Cooldown: </strong>{{petAbilityResults.cooldown}}</p>
   </div>
 
   <div class="output-container" *ngIf="petSpeciesResults">
+    <h3 class="output-name">{{petSpeciesResults.name}}</h3>
+    <p class="output-description">{{petSpeciesResults.description}}</p>
+    <p class="output-description"><strong>Source: </strong>{{petSpeciesResults.source}}</p>
+    <p class="output-array-heading"><strong>Abilities: </strong></p>
+    <hr>
+    <div class="output-array-list" *ngFor="let ability of petSpeciesResults.abilities">
+      <p class="output-array-item"><strong>Ability: </strong>{{ability.name}}</p>
+      <p class="output-array-item"><strong>Rounds: </strong>{{ability.rounds}}</p>
+      <p class="output-array-item"><strong>Cooldown: </strong>{{ability.cooldown}}</p>
+      <hr>
+    </div>
   </div>
 
   <div class="output-container" *ngIf="petStatsResults">
