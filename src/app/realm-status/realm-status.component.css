@@ -1,0 +1,13 @@
+table {
+  color: white;
+}
+
+tr,
+td {
+  padding: 5px 5px 5px 0;
+  text-align: center;
+}
+
+td {
+  border-bottom: 1px solid green;
+}

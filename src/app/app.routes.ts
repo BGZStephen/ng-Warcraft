@@ -2,7 +2,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./pages/home/home.component";
 import { ApiRootComponent, ApiAchievementComponent, ApiAuctionComponent, ApiBossesComponent,
          ApiItemComponent, ApiMountComponent, ApiPetComponent,
-         ApiPvpComponent, ApiQuestComponent, ApiRecipeComponent, ApiRealmStatusComponent,
+         ApiPvpComponent, ApiQuestComponent, ApiRealmStatusComponent,
          ApiSpellComponent, ApiZonesComponent } from './pages/api/api-barrel';
 
 
@@ -17,7 +17,6 @@ const APP_ROUTES: Routes = [
   {path: 'api/pet', component: ApiPetComponent},
   {path: 'api/pvp', component: ApiPvpComponent},
   {path: 'api/quest', component: ApiQuestComponent},
-  {path: 'api/recipe', component: ApiRecipeComponent},
   {path: 'api/realm-status', component: ApiRealmStatusComponent},
   {path: 'api/spell', component: ApiSpellComponent},
   {path: 'api/zones', component: ApiZonesComponent},

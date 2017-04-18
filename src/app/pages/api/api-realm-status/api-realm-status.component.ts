@@ -22,7 +22,7 @@ export class ApiRealmStatusComponent implements OnInit {
     this.apiService.apiSearch("RealmStatus")
     .subscribe(res => {
       this.realmStatusResults = res
-      // console.log(this.bossesResults)
+      console.log(this.realmStatusResults)
     })
   }
 

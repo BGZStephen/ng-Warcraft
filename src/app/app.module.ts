@@ -19,9 +19,10 @@ import { ApiAchievementComponent } from './pages/api/api-achievement/api-achieve
 import { ApiAuctionComponent } from './pages/api/api-auction/api-auction.component';
 import { ApiMountComponent } from './pages/api/api-mount/api-mount.component';
 import { ApiPvpComponent } from './pages/api/api-pvp/api-pvp.component';
-import { ApiRecipeComponent } from './pages/api/api-recipe/api-recipe.component';
 import { ApiSpellComponent } from './pages/api/api-spell/api-spell.component';
 import { ApiPetComponent } from './pages/api/api-pet/api-pet.component';
+import { RealmStatusComponent } from './realm-status/realm-status.component';
+import { realmFilterPipe } from "./pipes/realm-filter-pipe"
 
 @NgModule({
   declarations: [
@@ -39,9 +40,10 @@ import { ApiPetComponent } from './pages/api/api-pet/api-pet.component';
     ApiAuctionComponent,
     ApiMountComponent,
     ApiPvpComponent,
-    ApiRecipeComponent,
     ApiSpellComponent,
-    ApiPetComponent
+    ApiPetComponent,
+    RealmStatusComponent,
+    realmFilterPipe
   ],
   imports: [
     BrowserModule,

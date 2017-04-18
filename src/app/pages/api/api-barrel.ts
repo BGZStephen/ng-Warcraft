@@ -8,6 +8,5 @@ export { ApiAuctionComponent } from './api-auction/api-auction.component';
 export { ApiMountComponent } from './api-mount/api-mount.component';
 export { ApiPetComponent } from './api-pet/api-pet.component';
 export { ApiPvpComponent } from './api-pvp/api-pvp.component';
-export { ApiRecipeComponent } from './api-recipe/api-recipe.component';
 export { ApiSpellComponent } from './api-spell/api-spell.component';
 export { ApiZonesComponent } from './api-zones/api-zones.component';

@@ -14,7 +14,7 @@
         <p class="realm-status-up" *ngSwitchCase="true">UP</p>
         <p class="realm-status-down" *ngSwitchCase="false">DOWN</p>
       </div>
-      <div class="output-item" [ngSwitch]="realm.status">
+      <div class="output-item" [ngSwitch]="realm.queue">
         <h3 class="output-array-heading">Queue: </h3>
         <p class="realm-queue-true" *ngSwitchCase="false">YES</p>
         <p class="realm-queue-false" *ngSwitchCase="true">NO</p>
