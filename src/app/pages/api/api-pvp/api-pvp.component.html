@@ -1,3 +1,26 @@
-<p>
-  api-pvp works!
-</p>
+<div class="content-container">
+  <h1>PVP</h1>
+  <hr>
+  <div class="api-buttons-container">
+    <button class="api-button" (click)="searchPvp('2v2')">2v2</button>
+    <button class="api-button" (click)="searchPvp('3v3')">3v3</button>
+    <button class="api-button" (click)="searchPvp('5v5')">5v5</button>
+    <button class="api-button" (click)="searchPvp('rbg')">RBG</button>
+  </div>
+</div>
+
+<div class="output-container" *ngIf="pvpResults">
+  <div class="output-item" *ngFor="let character of pvpResults.rows">
+    <p class="output-name"><strong>Name:</strong> {{character.name}}</p>
+    <p class="output-description"><strong>Rating:</strong> {{character.rating}}</p>
+    <p class="output-description"><strong>Faction:</strong> {{getFaction(character.factionId)}}</p>
+    <p class="output-description"><strong>Race:</strong> {{getRace(character.raceId)}}</p>
+    <p class="output-description"><strong>Class:</strong> {{getClass(character.classId)}}</p>
+    <p class="output-description"><strong>Spec:</strong> {{getSpec(character.specId)}}</p>
+    <p class="output-description"><strong>Season Wins:</strong> {{character.seasonWins}}</p>
+    <p class="output-description"><strong>Season Losees:</strong> {{character.seasonLosses}}</p>
+    <p class="output-description"><strong>Weekly Wins:</strong> {{character.weeklyWins}}</p>
+    <p class="output-description"><strong>Weekly Losees:</strong> {{character.weeklyLosses}}</p>
+    <hr>
+  </div>
+</div>

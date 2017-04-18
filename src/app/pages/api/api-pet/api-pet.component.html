@@ -7,8 +7,6 @@
     </button><input class="api-input" type="text" placeholder="Ability ID" name="abilityInput" (keyup)="0" #abilityInput>
     <button class="api-button" [disabled]="speciesInput.value.length < 1" (click)="searchPetSpecies(speciesInput.value)" >Get Species
     </button><input class="api-input" type="text" placeholder="Species ID" name="speciesInput" (keyup)="0" #speciesInput>
-    <button class="api-button" [disabled]="statsInput.value.length < 1" (click)="searchPetStats(statsInput.value)" >Get Stats
-    </button><input class="api-input" type="text" placeholder="Stat ID" name="statsInput" (keyup)="0" #statsInput>
   </div>
 
   <div class="output-container" *ngIf="petsResults">
