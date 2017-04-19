@@ -1,3 +1,10 @@
-<p>
-  news-carousel works!
-</p>
+<div class="content-container">
+  <h1>Latest News</h1>
+  <div class="carousel-container" *ngIf="newsResults">
+    <div class="carousel-slide" *ngFor="let article of newsResults.articles">
+      <img class="carousel-slide-image" src="{{article.imgUrl}}">
+      <h2 class="carousel-slide-header">{{article.name}}</h2>
+      <p class="carousel-slide-description">{{article.description}}</p>
+    </div>
+  </div>
+</div>

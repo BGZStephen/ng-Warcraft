@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from "@angular/http"
 
 @Component({
   selector: 'wow-news-carousel',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsCarouselComponent implements OnInit {
 
-  constructor() { }
+  newsResults = {}
+
+  constructor(private http: Http) {
+    http.get("/assets/ng-warcraft/data-sources/news.json")
+    .subscribe(res => {
+      this.newsResults = res.json();
+      console.log(this.newsResults)
+    })
+  }
 
   ngOnInit() {
   }

@@ -1,16 +1,27 @@
 .content-container {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .left-container {
-  width: 65%;
+  width: 100%;
 }
 
 .right-container {
-  width: 35%;
+  width: 100%;
 }
 
 h1 {
   color: white;
+}
+
+@media (min-width: 768px) {
+  .left-container {
+    width: 65%;
+  }
+
+  .right-container {
+    width: 35%;
+  }
 }
