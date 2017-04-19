@@ -1,0 +1,24 @@
+<div class="content-container">
+  <h1>PVP Leaderboard</h1>
+  <div class="pvp-buttons-container">
+    <button class="pvp-button" (click)="getPvpResults('2v2')">2v2</button>
+    <button class="pvp-button" (click)="getPvpResults('3v3')">3v3</button>
+    <button class="pvp-button" (click)="getPvpResults('rbg')">RBG</button>
+  </div>
+  <table class="pvp-output-container" *ngIf="pvpResults" (keyup)="0">
+    <tr class="pvp-output-item" *ngFor="let player of pvpResults; let i = index">
+      <template [ngIf]="i < 20">
+        <td *ngIf="player.ranking" class="player-rank">{{player.ranking}}</td>
+        <td *ngIf="player.name" class="player-name">{{player.name}}</td>
+        <td><img class="faction-icon" src="{{getFactionIcon(player.factionId)}}"></td>
+        <td class="faction-name">{{getFaction(player.factionId)}}</td>
+        <td *ngIf="player.raceId"><img class="race-icon" src="{{getRaceIcon(player.raceId)}}"></td>
+        <td *ngIf="player.raceId" class="race-name">{{getRace(player.raceId)}}</td>
+        <td *ngIf="player.classId"><img class="class-icon" src="{{getClassIcon(player.classId)}}"></td>
+        <td *ngIf="player.classId" class="class-name">{{getClass(player.classId)}}</td>
+        <td *ngIf="player.specId > 0"><img class="spec-icon" src="{{getSpecIcon(player.specId)}}"></td>
+        <td *ngIf="player.specId > 0" class="spec-name">{{getSpec(player.specId)}}</td>
+      </template>
+    </tr>
+  </table>
+</div>

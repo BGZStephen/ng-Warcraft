@@ -22,7 +22,8 @@ import { ApiPvpComponent } from './pages/api/api-pvp/api-pvp.component';
 import { ApiSpellComponent } from './pages/api/api-spell/api-spell.component';
 import { ApiPetComponent } from './pages/api/api-pet/api-pet.component';
 import { RealmStatusComponent } from './realm-status/realm-status.component';
-import { realmFilterPipe } from "./pipes/realm-filter-pipe"
+import { realmFilterPipe } from "./pipes/realm-filter-pipe";
+import { PvpLeaderboardComponent } from './pvp-leaderboard/pvp-leaderboard.component'
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { realmFilterPipe } from "./pipes/realm-filter-pipe"
     ApiSpellComponent,
     ApiPetComponent,
     RealmStatusComponent,
-    realmFilterPipe
+    realmFilterPipe,
+    PvpLeaderboardComponent
   ],
   imports: [
     BrowserModule,
