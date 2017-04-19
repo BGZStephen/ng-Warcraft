@@ -1,23 +1,23 @@
 <div class="content-container" *ngIf="realmStatusResult">
   <h1>Realm Status</h1>
   <div class="locale-button-container">
-    <button class="locale-button" (click)="setCurrentRealm('en_GB')">GB</button>
-    <button class="locale-button" (click)="setCurrentRealm('de_DE')">DE</button>
-    <button class="locale-button" (click)="setCurrentRealm('es_ES')">ES</button>
-    <button class="locale-button" (click)="setCurrentRealm('fr_FR')">FR</button>
-    <button class="locale-button" (click)="setCurrentRealm('it_IT')">IT</button>
-    <button class="locale-button" (click)="setCurrentRealm('ru_RU')">RU</button>
+    <button class="locale-button" (click)="setCurrentRealm('en_GB'); setActiveRealm('GB')">GB</button>
+    <button class="locale-button" (click)="setCurrentRealm('de_DE'); setActiveRealm('DE')">DE</button>
+    <button class="locale-button" (click)="setCurrentRealm('es_ES'); setActiveRealm('ES')">ES</button>
+    <button class="locale-button" (click)="setCurrentRealm('fr_FR'); setActiveRealm('FR')">FR</button>
+    <button class="locale-button" (click)="setCurrentRealm('it_IT'); setActiveRealm('IT')">IT</button>
+    <button class="locale-button" (click)="setCurrentRealm('ru_RU'); setActiveRealm('RU')">RU</button>
   </div>
   <div class="realm-locale-container">
     <div class="realm-status-container">
       <table>
         <thead>Realm Status</thead>
         <tbody>
-          <tr>
-            <td>Realm</td>
-            <td>Status</td>
-            <td>Pop</td>
-            <td>Queue</td>
+          <tr class="table-head-row">
+            <td class="table-head">Realm</td>
+            <td class="table-head">Status</td>
+            <td class="table-head">Pop</td>
+            <td class="table-head">Queue</td>
           </tr>
           <tr *ngFor="let realm of realmStatusResult | realmFilterPipe:currentRealm">
             <td>{{realm.name}}</td>
@@ -31,8 +31,8 @@
               <p class="realm-status-high" *ngSwitchCase="'high'">HIGH</p>
             </td>
             <td [ngSwitch]="realm.queue">
-              <p class="realm-queue-true" *ngSwitchCase="false">YES</p>
-              <p class="realm-queue-true" *ngSwitchCase="true">NO</p>
+              <p class="realm-queue-false" *ngSwitchCase="false">NO</p>
+              <p class="realm-queue-true" *ngSwitchCase="true">YES</p>
             </td>
           </tr>
         </tbody>

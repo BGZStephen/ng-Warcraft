@@ -16,6 +16,17 @@ export class RealmStatusComponent implements OnInit {
     this.currentRealm = realmLocale;
   }
 
+  setActiveRealm(id) {
+    let buttons = document.getElementsByClassName("locale-button")
+    for(let i = 0; i < buttons.length; i++) {
+      if(buttons[i].textContent == id) {
+        buttons[i].classList.add("locale-button-active")
+      } else {
+        buttons[i].classList.remove("locale-button-active")
+      }
+    }
+  }
+
   constructor(private apiService: WowApiService) {
     this.apiService.apiSearch("RealmStatus")
     .subscribe(res => {
