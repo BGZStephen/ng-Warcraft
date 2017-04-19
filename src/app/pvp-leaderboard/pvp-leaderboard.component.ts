@@ -76,7 +76,7 @@ export class PvpLeaderboardComponent implements OnInit {
     "262": {name: "Elemental", icon: "assets/ng-warcraft/images/icons/shaman/elemental.png"},
     "263": {name: "Enhancement", icon: "assets/ng-warcraft/images/icons/shaman/enhancement.png"},
     "264": {name: "Restoration", icon: "assets/ng-warcraft/images/icons/shaman/restoration.png"},
-    "265": {name: "Affliction", icon: "assets/ng-warcraft/images/icons/warlock/afflication.png"},
+    "265": {name: "Affliction", icon: "assets/ng-warcraft/images/icons/warlock/affliction.png"},
     "266": {name: "Demonology", icon: "assets/ng-warcraft/images/icons/warlock/demonology.png"},
     "267": {name: "Destruction", icon: "assets/ng-warcraft/images/icons/warlock/destruction.png"},
     "71": {name: "Arms", icon: "assets/ng-warcraft/images/icons/warrior/arms.png"},

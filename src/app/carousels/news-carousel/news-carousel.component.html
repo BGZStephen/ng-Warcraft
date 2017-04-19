@@ -1,12 +1,27 @@
 <div class="content-container">
   <h1>Latest News</h1>
   <div class="carousel-container" *ngIf="newsResults">
-    <div class="carousel-slide" *ngFor="let article of newsResults.articles; let i = index">
-      <template [ngIf]="i < 3">
-        <img class="carousel-slide-image" src="{{article.imgUrl}}">
-        <h2 class="carousel-slide-header">{{article.name}}</h2>
-        <p class="carousel-slide-description">{{article.description}}</p>
-      </template>
+    <div class="carousel-slide" *ngFor="let article of newsResults.articles | slice:0:3">
+      <a href="{{article.url}}"><img class="carousel-slide-image" src="{{article.imgUrl}}">
+      <h2 class="carousel-slide-header">{{article.name}}</h2>
+      <p class="carousel-slide-description">{{article.description}}</p></a>
+    </div>
+  </div>
+</div>
+<div class="content-container">
+  <div class="news-container">
+    <hr>
+    <div class="news-item" *ngFor="let article of newsResults.articles | slice:3:6">
+
+      <h2 class="news-heading"><a class="news-link" href="{{article.url}}">{{article.name}}</a></h2>
+      <div class="news-image-container">
+        <a class="news-link" href="{{article.url}}"><img class="news-image" src="{{article.imgUrl}}"></a>
+      </div>
+      <div class="news-description-container">
+        <p class="news-description"><a class="news-link" href="{{article.url}}">{{article.description}}</a></p>
+        <hr>
+      </div>
+
     </div>
   </div>
 </div>

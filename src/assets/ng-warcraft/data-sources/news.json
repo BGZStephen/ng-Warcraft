@@ -3,19 +3,37 @@
         "id": 1,
         "name": "The Tomb of Sargeras Now Live!",
         "description": "Patch 7.2: The Tomb of Sargeras brings with it a variety of new content and updates. Demon Assaults rise within the Broken Isles and a return to the Broken Shore is imperative for the Class Orders. This time, they assault the shore as a more prepared force wielding great weapons of power. But, will it be enough to carve a way to the Tomb of Sargeras?",
-        "url": "url 1",
+        "url": "https://worldofwarcraft.com/en-gb/news/20602170/patch-7-2-the-tomb-of-sargeras-now-live",
         "imgUrl": "/assets/ng-warcraft/news/tomb_of_sargeras_01.jpg"
     }, {
       "id": 2,
       "name": "Return to the Broken Shore",
       "description": "With the launch of patch 7.2, we wanted to share a bit more information on the release of the various pieces of in-game content and the pacing as we tell the ongoing story of the fight against the Burning Legion.",
-      "url": "url 2",
+      "url": "https://worldofwarcraft.com/en-gb/news/20602168/patch-7-2-preview-return-to-the-broken-shore",
       "imgUrl": "/assets/ng-warcraft/news/return_to_the_broken_shore_01.jpg"
     }, {
       "id": 3,
       "name": "This Month in WoW: April",
       "description": "April showers might bring May flowers, but it also brings with it a great many things to do within World of Warcraft. Make sure you keep an eye on your in-game calendar for exact start and end times so you don’t miss a thing!",
-      "url": "url 3",
+      "url": "https://worldofwarcraft.com/en-gb/news/20653217/this-month-in-wow-april",
       "imgUrl": "/assets/ng-warcraft/news/wow_in_april.jpg"
+    }, {
+        "id": 4,
+        "name": "Shake Up the Battlegrounds with PvP Brawls",
+        "description": "Get ready for cold weather in this week's PvP Brawl: Frozen Arathi Basin, taking place April 4-11!",
+        "url": "https://worldofwarcraft.com/en-gb/news/20564524/shake-up-the-battlegrounds-with-pvp-brawls",
+        "imgUrl": "/assets/ng-warcraft/news/pvp_brawls_april.jpg"
+    }, {
+      "id": 5,
+      "name": "Unlocking Flying in Legion",
+      "description": "Want to earn your wings in Legion? Here’s how to complete Broken Isles Pathfinder, Part Two on the Broken Shore—unlocking flying for all your characters.",
+      "url": "https://worldofwarcraft.com/en-gb/news/20565047/unlocking-flying-in-legion",
+      "imgUrl": "/assets/ng-warcraft/news/flying_in_legion.jpg"
+    }, {
+      "id": 6,
+      "name": "Patch 7.2 Preview: A Challenging Appearance!",
+      "description": "Artifact Weapons have been proven to be powerful tools against the Burning Legion. With the release of patch 7.2, we are not only adding an Artifact questline to unlock new traits, but we’re also adding a new Artifact challenge appearance. But, you’re going to have to earn it — the hard way.",
+      "url": "https://worldofwarcraft.com/en-gb/news/20602173/patch-7-2-preview-a-challenging-appearance",
+      "imgUrl": "/assets/ng-warcraft/news/a_challenging_appearance.jpg"
     }]
 }
